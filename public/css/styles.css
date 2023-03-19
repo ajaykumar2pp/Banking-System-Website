@@ -1,0 +1,36 @@
+
+
+/* ************************ Bank Details  ********************************** */
+.bank-text{
+  margin-top: 20px;
+  margin-left: 100px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.internship{
+  color: #181b38;
+  cursor: pointer;
+  
+}
+.box{
+  background-color: rgb(242, 242, 252);
+  height: 90vh;
+ 
+}
+.bank-name{
+     margin-top: 100px;
+  font-weight: 700;
+  color: #181b38;
+  font-size: 70px;
+  margin-left: 100px;
+}
+.bank-web{
+
+  font-weight: 700;
+  color: #181b38;
+  font-size: 70px;
+  margin-left: 100px;
+}
+.bank-img{
+  margin-top: 50px;
+}

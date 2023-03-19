@@ -1,0 +1,78 @@
+<%-include("./partials/header") %> <%-include("./partials/navbar") %>
+
+
+  <div class="container-fluid box ">
+    <div class="">
+      <h2 class="text-center mt-3 p-2">Account Holder Details</h2>
+      <div class="row  justify-content-center  mb-5 shadow-sm  rounded">
+      <div class="col-md-4">
+        <div class="text-center">
+          <img class="img-fluid bank-img rounded"src="/images/bank-icon.png" alt="bank-image" width="100px" height="100px" />
+          <h1 class="text-center mt-2">Coding Online Bank</h1>
+          <h2 class="text-center"><%=customerData.name%></h2>
+        </div>
+      </div>
+      <div class="col-md-5 mt-5">
+        <div class="row border mb-5 shadow-sm border-danger rounded p-2 justify-content-between ">
+          <div class="col-md-8 mt-2">
+            <div class="">
+              <div class="div">
+                <h6 class="fw-bold">Name : <%=customerData.name%></h6>
+                <h6 class="fw-bold">DOB: <%=dob%></h6>
+                <h6 class="fw-bold">Email Id :  <%=customerData.email%></h6>
+                <h6 class="fw-bold">Mobile No. : <%=customerData.phone%></h6>
+                
+                <h6 class="fw-bold">Address : <%=customerData.address%></h6>
+                <h6 class="fw-bold">Gender : <%=customerData.gender%></h6>
+                <h6 class="fw-bold ">Account No. : <%=customerData.accNo%></h6>
+                <h6 class="fw-bold bg-light h5">Current Balance : <i
+                  class="fas fa-rupee-sign "></i><%=(customerData.currentBal).toLocaleString('en-IN')%> </h6>
+                <h6 class="fw-bold">Created on: <%=createdAt%></h6>
+                <h6 class="fw-bold">Modified on: <%=modifiedAt%></h6>
+               
+            </div>
+          </div>
+          </div>
+
+          <div class="col-md-3 mt-2">
+            <img src="<%=customerData.image%>" alt="user-image" width="120px" class='img-fluid rounded' />
+          </div>
+        </div>
+      </div>
+    </div>
+      
+
+
+                             <!-- Button -->
+                             <div class="row justify-content-center mt-3">
+                              <div class="col-md-2">
+                                <button type="button" class="btn  btn-primary btn-lg " data-bs-toggle="modal"data-bs-target="#staticBackdrop">
+                                  Add Money
+                                </button>
+                              </div>
+                              <div class="col-md-2">
+                                <button type="button" class="btn  btn-primary btn-lg "
+                                data-bs-toggle="modal"
+                                data-bs-target="#withdrawlBackdrop"> Withdraw Money </button>
+                              </div>
+                          
+                              <div class="col-md-2">
+                                <button type="button" class="btn  btn-primary btn-lg " data-bs-toggle="modal"
+                                data-bs-target="#transferBackdrop"> Transfer Money </button>
+                              </div>
+                          
+                              <div class="col-md-3">
+                                <a href="<%=customerData.accNo%>/transactions" class="btn  btn-primary btn-lg "> Transactions Details</a>
+                          
+                              </div>
+                            </div>
+
+
+  </div>
+<!-- Box End -->
+
+</div>
+
+<%-include("./partials/addFundsModal") %> 
+<%-include("./partials/withdrawModal") %> <%-include("./partials/transferModal")
+%>

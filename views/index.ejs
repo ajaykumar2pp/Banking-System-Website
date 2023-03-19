@@ -1,0 +1,75 @@
+<%-include("./partials/header") %> <%-include("./partials/navbar") %>
+<div class="container-fluid nav-color">
+
+  <!-- *************************** Section *************************** -->
+  <div class="box mb-5">
+      <div class="row">
+          <div class="col-md-7">
+              <h1 class="bank-name">Coding Online</h1>
+              <h1 class="bank-web"> Banking System</h1>
+              <p class="bank-text">A Basic banking system application with features for adding, withdrawing, and transferring money between customers.</p>
+          </div>
+          <div class="col-md-4">
+              <img src="/images/bank-imag.avif" alt="internet-banking" class="img-fluid bank-img rounded " width="400px" height="400px">
+          </div>
+      </div>
+
+
+  </div>
+</div>
+<div
+  class="container-fluid">
+  <% if (customers.length>0) { %>
+    <div class="row justify-content-center">
+      <div class="col-md-2">
+          <h2 class="btn btn-danger btn-lg">Customer Details</h2>
+      </div>
+  </div>
+  <div class="row justify-content-center mt-4">
+    <div class="col-md-10">
+      <table
+        class="table table-bordered border-success align-content-center">
+        <thead class="text-center fs-6">
+          <tr>
+            <th>Sr. No.</th>
+            <th>Name</th>
+            <th>Email ID</th>
+            <th>Address</th>
+            <th>Current Balance</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody class="text-center fs-6">
+          <% customers.forEach((customer,index) => { %>
+          <tr>
+            <td class="fw-bold"><%=index +1%></td>
+            <td><%=customer.name%></td>
+            <td><%=customer.email%></td>
+            <td><%=customer.address%></td>
+            <td>
+              <span><i class="fas fa-rupee-sign"></i></span
+              ><%=(customer.currentBal).toLocaleString('en-IN')%>
+            </td>
+            <td>
+              <a
+                type="button"
+                class="btn btn-sm btn-success p-1 fw-bold"
+                href="/customers/<%=(customer.accNo).toString()%>"
+              >
+                View Details
+              </a>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <% }else{ %>
+  <div class="row">
+    <h1 class="text-center">NO DATA</h1>
+  </div>
+  <%}%>
+</div>
+
+
