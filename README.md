@@ -2,18 +2,15 @@
  
 ## ⭐ Introduction
 
-This is a Habit Tracker  Project which is built using Nodejs, Ejs ,CSS, Javascript , Bootstrap. It is responsive across all devices.
+This is a Basic Bankig System  Project which is built using Nodejs, Ejs ,CSS, Javascript , Bootstrap. It is responsive across all devices.
 <br/>
 <br/>
 
 ## Features
 -A Basic banking system application with features for adding, withdrawing, and transferring money between customers.Dummy data Detch from Database.
-
 <br/>
 <br/>
 .
-
-
 ## Packages Install
 -body-parser <br/>
 -dotenv<br/>
